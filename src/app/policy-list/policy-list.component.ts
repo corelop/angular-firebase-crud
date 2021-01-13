@@ -17,8 +17,8 @@ export class PolicyListComponent implements OnInit {
       this.policies = data.map(e => {
         return {
           id: e.payload.doc.id,
-          ...e.payload.doc.data()
-        } as Policy;
+          data: e.payload.doc.data()
+        } as unknown as Policy;
       })
     });
   }

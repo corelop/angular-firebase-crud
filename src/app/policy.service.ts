@@ -18,7 +18,7 @@ export class PolicyService {
   }
 
   updatePolicy(policy: Policy){
-    delete policy.id;
+    //delete policy.id;
     this.firestore.doc('policies/' + policy.id).update(policy);
   }
 
